@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/logo-favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    <title>Cadastro | Risee</title>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+
+<body>
+    <img src="../../assets/img/logo-side.png" alt="Risee Home" id="sign-up-logo">
+
+    <main>
+        <h1>Cadastro</h1>
+
+        <form id="sign-up-form">
+            <div>
+                <input required type="text" id="su-nome" class="input">
+                <label for="su-nome">Nome</label>
+            </div>
+            <div>
+                <input required type="text" id="su-sobrenome" class="input">
+                <label for="su-sobrenome">Sobrenome</label>
+            </div>
+            <div>
+                <input required type="email" id="su-email" class="input">
+                <label for="su-email">Email</label>
+            </div>
+            <div>
+                <input required type="password" id="su-senha" class="input">
+                <label for="su-senha">Senha</label>
+            </div>
+            <div>
+                <input required type="password" id="su-confirmarSenha" class="input">
+                <label for="su-confirmarSenha">Confirmar Senha</label>
+            </div>
+
+            <input type="submit" value="Cadastrar" id="cadastroBtn">
+        </form>
+
+        <span id="txt-login">Já tem uma conta? <a href="../login/index.html">ENTRAR</a></span>
+
+    </main>
+    <script src="./assets/js/main.js"></script>
+</body>
+</html>

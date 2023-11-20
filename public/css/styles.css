@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100;200;300;400;500;600;700&display=swap');
+:root{
+    --blue-1-:#391ce2;
+    --blue-2-:#5935e9;
+    --purple-1-:#7a4ef1;
+    --purple-2-:#9a66f8;
+    --purple-3-:#ba7fff;
+    --gray-1-:#9c9c9c;
+    --gray-2-:#d5d5d5;
+    --gray-3-: #363636;
+    --gray-4-:#f4f4f4;
+
+    --black-:#000000;
+    --white-:#ffffff;
+}
+
+*{
+    font-family: 'Noto Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    text-decoration: none;
+    color: var(--black-);
+}
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 3rem;
+}
+
+.header-logo-site img{
+    width: 200px;
+}
+
+.header-link-account a:hover{
+    transition: 1s;
+    color: var(--gray-1-);
+}
+
+main div{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 4rem 2rem;
+}
+
+.block-main-text,.block2-main{
+    flex-direction: column;
+}
+
+main h1{
+    font-size: 70px;
+    text-align: center;
+}
+
+main h3{
+    font-size: 25px;
+    font-weight: 400;
+    text-align: center;
+}
+
+main button {
+    font-size: 24px;
+    font-weight: 700;
+    margin: 4rem;
+    padding: 20px 30px;
+    border-radius: 60px;
+    border: none;
+    cursor: pointer;
+    color: var(--white-);
+}
+
+main button:hover{
+    transition: 0.3s;
+    transform: scale(1.05);
+    opacity: 90%;
+}
+
+.block1-main{
+    height: 80vh;
+}
+
+.block1-main button{
+    background: var(--purple-1-);
+}
+
+.block3-main button{
+    background: var(--blue-1-);
+}
+
+.block4-main button{
+    background: var(--blue-2-);
+}
+
+.block2-main{
+    background-image: linear-gradient(var(--blue-2-) , var(--purple-2-));
+    box-shadow: 0px 4px 25px -9px rgba(0,0,0,0.75);
+}
+
+#white-text{
+    color: var(--white-);
+}
+
+.block2-main-img{
+    margin: -120px;
+}
+
+.categories{
+    font-size: 32px;
+}
+
+.categories i{
+    background: var(--white-);
+    width: 100px;
+    padding: 50px 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+footer{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem;
+    gap: 4rem;
+
+    background: var(--gray-3-);
+}
+
+footer h4, footer a{
+    color: var(--gray-1-);
+}
+
+footer h4{
+    font-weight: 400;
+}
+
+footer i{
+    font-size: 24px;
+    padding: 0.5rem;
+}
+
+footer i:hover{
+    color: var(--gray-2-);
+    transform: scale(1.05);
+}
+
+
+
+
+
+

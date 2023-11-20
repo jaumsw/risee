@@ -1,0 +1,46 @@
+{
+  "usuarios": [
+    {
+      "id": 1,
+      "nome": "João",
+      "email": "joao@example.com",
+      "senha": "senha123",
+      "renda": 3000.00,
+      "gastos": [
+        {
+          "descricao": "Compras no supermercado",
+          "valor": 150.00,
+          "data": "2023-11-19",
+          "categoria": "Alimentação"
+        },
+        {
+          "descricao": "Restaurante",
+          "valor": 50.00,
+          "data": "2023-11-18",
+          "categoria": "Alimentação"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "nome": "Pedro",
+      "email": "pedro@example.com",
+      "senha": "senha456",
+      "renda": 4000.00,
+      "gastos": [
+        {
+          "descricao": "Gasolina",
+          "valor": 80.00,
+          "data": "2023-11-17",
+          "categoria": "Transporte"
+        },
+        {
+          "descricao": "Cinema",
+          "valor": 30.00,
+          "data": "2023-11-16",
+          "categoria": "Entretenimento"
+        }
+      ]
+    }
+  ]
+}

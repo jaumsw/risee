@@ -1,0 +1,214 @@
+.settings-page-content{
+    margin-left: 300px;
+}
+
+/*Divs com background*/
+.settings-sec-title,
+.data-head,
+.data-flex input,
+#altCancelar{
+    background: #ffffff;
+    box-shadow: 
+    5px 9px 13px -6px rgba(0,0,0,0.1);
+}
+
+/*Divs tamanho*/
+.data-head,
+.data-inputs,
+.off-account{
+    margin-top: 3rem;
+    width: 45%;
+}
+
+.settings-sec-title{
+    padding: 2rem;    
+}
+
+.data-content,
+.data-head,
+.head-l{
+    display: flex;
+    align-items: center;
+}
+
+.data-head,
+.head-l{
+    gap: 1rem;
+}
+
+.data-content{
+    flex-direction: column;
+}
+
+.data-head{
+    justify-content: space-between;
+    padding: 2rem;
+    border-radius: 20px;
+}
+
+.head-l img{
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
+    object-fit: cover;
+}
+
+.head-l div p{
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.head-r{
+    transition: 0.2s;
+}
+
+.head-r label{
+    font-size: 14px;
+    cursor: pointer;
+    border: 
+    solid #bbbbbb 1px;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.head-r input{
+    display: none;
+    padding: 10px;
+}
+
+.head-r:active{
+    transform: scale(0.9);
+}
+
+
+.data-inputs p{
+    margin-bottom: 2rem;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.data-inputs div{
+    margin-bottom: 1rem;
+}
+
+.data-flex,
+.data-flex div{
+    display: flex;
+}
+
+.data-flex{
+    gap: 3rem;
+}
+
+.data-flex div{
+    width: 100%;
+    flex-direction: column;
+}
+
+.data-flex span{
+    font-size: 14px;
+}
+
+.data-flex input{
+    background: #fafafa;
+    font-size: 16px;
+    padding: 10px;
+    outline: none;
+    border: none;
+    border: solid rgba(0,0,0,0.1) 1px;
+    border-radius: 4px;
+    transition: 0.3s;    
+}
+
+.data-flex input:focus{
+    box-shadow: 
+    0px 0px 15px -10px #5e38e8;
+    border: solid #5e38e8 1px;
+}
+
+.alt-btns{
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-end;
+    padding: 20px 0;
+}
+
+.alt-btns input{
+    padding: 12px 26px;
+    border-radius: 5px;
+    border: none;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.3s;   
+}
+
+#altSalvar{
+    background: #4942E4;
+    box-shadow: 
+    5px 9px 13px -6px rgba(0,0,0,0.1);
+    color: #ffffff;
+}
+
+.alt-btns input:active{
+    transform: scale(0.9);
+}
+
+/*Sair e Deletar Conta*/
+.off-account,
+.off-account div,
+.off-account a{
+    display: flex;
+}
+
+.off-account div{
+    box-shadow: 
+    5px 9px 13px -6px rgba(0,0,0,0.1);
+    background: #ffffff;
+    border-radius: 20px;
+}
+
+.off-account{
+    justify-content: space-between;
+    padding: 6rem 0;
+    border-top: 
+    solid rgba(0,0,0,0.1) 1px; 
+    gap: 1rem;
+}
+
+.off-account div{
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+}
+
+.off-account div span{
+    color: #aaa;
+}
+
+.off-link{
+    margin-top: 2rem;
+    font-size: 14px;
+    padding: 8px;
+    border-radius: 5px;
+    transition: 0.2s;
+}
+
+#sairContaLink{
+    border: solid #192256 1px;
+    color: #192256;
+    width: 10%;
+}
+
+#delContaLink{
+    border: solid red 1px;
+    color: red;
+    width: 30%;
+}
+
+.off-link:active{
+    transform: scale(0.9);
+}
+
+input[type=number]::-webkit-inner-spin-button { 
+    -webkit-appearance: none;
+}

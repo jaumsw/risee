@@ -1,0 +1,410 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap');
+
+*{
+    font-family: 'DM Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    text-decoration: none;
+}
+
+body{
+    background: #f8f8f8;
+}
+
+.sidebar-menu-content{
+    background: white;
+    border: 
+    solid rgba(0,0,0,0.1) 1px;
+    position: fixed;
+    width: 300px;
+    height: 100vh;
+}
+
+.sidebar-menu-content header img{
+    width: 150px;
+    padding: 2rem;
+}
+
+.nav-sidebar div{
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+}
+
+.nav-sidebar div a{
+    color: #192655;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 2rem 0.8rem;
+
+    font-weight: 400;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.nav-sidebar div i{
+    font-size: 22px;
+}
+
+.nav-sidebar div a:hover{
+    color: #FFF;
+    background: #5D38E8;
+}
+
+.data-menu-box{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}
+
+.data-menu-content{
+    display: flex;
+    gap: 10px;
+    padding: 1rem;
+    border: 
+    solid rgba(0,0,0,0.1) 1px;
+}
+
+.data-menu-content img{
+    object-fit: cover;
+    border-radius: 10px;
+    width: 60px;
+    height: 60px;
+}
+
+.data-menu-content div{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+.data-menu-content  div p{
+    font-weight: 300;
+}
+
+.data-menu-content  div i{
+    color: #192655;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 18px;
+
+    background: #F0F0F0;
+}
+.page-gastos-content{
+    margin-left: 320px;
+    padding: 2rem;
+}
+
+.page-gastos-content i{
+    color: white;
+    border-radius: 100%;
+    padding: 10px;
+    font-size: 18px;
+}
+
+#selData{
+    border: solid #ccc 1px;
+    border-radius: 10px;
+    width: 200px;
+    background: none;
+    text-align: center;
+}
+
+.valores,.gastos-categ,.gastos-detalhes{
+    box-shadow: 
+    0px 10px 20px -10px rgba(0,0,0,0.2);    
+    background: white;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+/*Saldo e Despesa*/
+.financeiro-bo{
+    display: flex;
+    gap: 2rem;
+    padding: 2rem;
+    justify-content: center;
+    border-bottom: solid rgba(0,0,0,0.2) 1px;
+}
+
+.valores{
+    width: 250px;
+    height: 90px;
+}
+
+.valores div{
+    font-size: 25px;
+    font-weight: 600;
+    margin-top: 1rem;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.valores i{
+    background: #5d38e8;
+    font-size: 25px;
+}
+
+/*Categorias*/
+.gastos-categ-bo{
+    display: flex;
+    gap: 4rem;
+    padding: 2rem;
+    justify-content: center;
+}
+
+.gastos-categ{
+    display: flex;
+    gap: 10px;
+    width: 200px;
+    padding: 10px;
+    flex-direction: column;
+}
+
+.gastos-categ div{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.gastos-categ span{
+    font-size: 18px;
+    font-weight: 600;
+}
+
+#compras-categ i{
+    background: #ef233c;
+}
+
+#casa-categ i{
+    background: #028090;
+}
+
+#alimentacao-categ i{
+    background: #fcbf49;
+}
+
+#viagem-categ i{
+    background: #2667ff;
+}
+
+#outros-categ i{
+    background: #fb8500;
+}
+
+/*Tabela e Grafico*/
+.gastos-detalhes-box{
+    margin-top: 4rem;
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.gastos-detalhes{
+    width: 50%;
+}
+
+.gastos-detalhes p{
+    font-size: 15px;
+}
+
+table{
+    margin-top: 1.5rem;
+    width: 100%;
+    padding: 10px;
+    border-collapse: collapse;
+}
+
+table th{
+    border-right: solid rgba(0,0,0,0.2) 1px;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+th,tr{
+    width: 20%;
+}
+dialog::backdrop{
+    background-color: rgb(0 0 0 / .5);
+}
+
+.add-gastos-dialog{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.add-gastos-dialog{
+    box-shadow: 
+    0px 10px 20px -10px rgba(0,0,0,0.2);
+    border: none;
+    border-radius: 5px;
+    width: 400px;
+    padding: 2rem;
+}
+
+#closeGasto{
+    display: flex;
+    justify-content: flex-end;
+    font-size: 20px;
+}
+
+.add-gastos-content{
+    padding: 2rem;
+}
+
+.add-gastos-content h2{
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.add-gastos-content h2::after{
+    background: #5d38e8;
+    content: '';
+    display: block;
+    margin: 0;
+    width: 50px;
+    height: 2px;
+}
+
+.add-gastos-inputs{
+    margin-top: 2rem;
+    gap: 1.5rem;
+}
+
+.add-gastos-inputs, 
+.add-gastos-inputs div{
+    display: flex;
+    flex-direction: column;
+}
+
+.add-gastos-inputs label{
+    font-size: 14px;
+}
+
+.add-gastos-inputs input, #selCategoria{
+    border: none;
+    border: 
+    solid rgba(0,0,0,0.5) 1px;
+    border-radius: 5px;
+    outline: none;
+    padding: 10px 5px;
+
+}
+
+#salvarGasto{
+    margin-top: 4rem;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 300;
+    background: #4942E4;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+
+#salvarGasto:hover{
+    background: black;
+}
+
+#salvarGasto:active{
+    transform: scale(0.9);
+}
+dialog::backdrop{
+    background-color: rgb(0 0 0 / .5);
+}
+
+.add-renda-dialog{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.add-renda-dialog{
+    box-shadow: 
+    0px 10px 20px -10px rgba(0,0,0,0.2);
+    border: none;
+    border-radius: 5px;
+    width: 400px;
+    padding: 2rem;
+}
+
+#closeRenda{
+    display: flex;
+    justify-content: flex-end;
+    font-size: 20px;
+}
+
+.add-renda-content{
+    padding: 2rem;
+}
+
+.add-renda-content h2{
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.add-renda-content h2::after{
+    background: #5d38e8;
+    content: '';
+    display: block;
+    margin: 0;
+    width: 50px;
+    height: 2px;
+}
+
+.add-renda-inputs{
+    margin-top: 2rem;
+    gap: 1.5rem;
+}
+
+.add-renda-inputs, 
+.add-renda-inputs div{
+    display: flex;
+    flex-direction: column;
+}
+
+.add-renda-inputs label{
+    font-size: 14px;
+}
+
+.add-renda-inputs input, #selCategoria{
+    border: none;
+    border: 
+    solid rgba(0,0,0,0.5) 1px;
+    border-radius: 5px;
+    outline: none;
+    padding: 10px 5px;
+
+}
+
+#salvarRenda{
+    margin-top: 4rem;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 300;
+    background: #4942E4;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+
+#salvarRenda:hover{
+    background: black;
+}
+
+#salvarRenda:active{
+    transform: scale(0.9);
+}

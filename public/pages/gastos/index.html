@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="./assets/css/styles.css" rel="stylesheet">
+    <link href="css/meus-gastos.css" rel="stylesheet">
+    <link href="css/add-gastos.css" rel="stylesheet">
+    <link href="css/add-renda.css" rel="stylesheet">
+    <title>Meus Gastos | Risee</title>
+</head>
+<body>
+    <div class="sidebar-menu-content">
+        <header>
+            <img src="../../assets/img/logo-side.png" alt="Risee Logo">    
+        </header>
+
+        <nav class="nav-sidebar">
+            <div>
+                <a href="./index.html">
+                    <i class='bx bx-wallet'></i> Gastos
+                </a>
+                <a href="#" id="adicionarGastoLink" onclick="adicionarGasto()">
+                    <i class='bx bx-trending-down' ></i> Adicionar Gasto
+                </a>
+                <a href="#" id="adicionarRendaLink" onclick="adicionarRenda()">
+                    <i class='bx bx-trending-up' ></i> Adicionar Renda
+                </a>
+                <a href="">
+                    <i class='bx bx-category-alt' ></i> Gastos Detalhados
+                </a>
+                <a href="">
+                    <i class='bx bx-calendar-alt'></i> Minhas Metas
+                </a>
+            </div>
+
+            <div>
+                <a href="../configurações/index.html">
+                    <i class='bx bx-category-alt' ></i> Configurações
+                </a>
+                <a href="">
+                    <i class='bx bx-help-circle' ></i> Ajuda
+                </a>    
+            </div>
+        </nav>
+
+        <div class="data-menu-box">
+            <div class="data-menu-content">
+                <img src="./assets/img/profile.jpg" alt="Foto Usuario" class="usuario-foto-menu">
+                <div>
+                    <p class="usuario-nome-menu">Nome Usuario</p>
+                    <a href=""><i class='bx bx-exit'></i></a>
+                </div>
+            </div>
+        </div>
+    </div>  
+
+        <div class="user-info-box">
+            <div class="user-info">
+                <img class="user-img" src="./assets/" alt="User Image">
+                
+                <div>
+                    <p class="user-nome">Nome Usuario</p>
+                    <a href="../login/index.html"><i class='bx bx-exit'></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--conteudo tela gastos-->
+    <main>
+        <div class="page-gastos-content">
+            <div class="selecionar-data-bo">
+                <select name="selData" id="selData">
+                    <option value="Mês,Ano" hidden>Mês,Ano</option>
+                </select>
+            </div>
+
+
+            <div class="financeiro-bo">
+                <!--renda-->
+                <div class="valores">
+                    <p>Saldo</p>
+
+                    <div>
+                        <i class='bx bx-up-arrow-alt'></i> <span class="valores-span" id="rendaTxt">R$ 0,00</span>    
+                    </div>
+                </div>
+
+                <!--gastos-->
+                <div class="valores">
+                    <p>Despesa</p>  
+                    
+                    <div>
+                        <i class='bx bx-down-arrow-alt'></i> <span class="valores-span" id="gastoTxt">R$ 0,00</span>    
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="gastos-categ-bo">
+                <!--compras-->
+                <div class="gastos-categ" id="compras-categ">
+                    <div>
+                        <i class='bx bx-cart-alt'></i> <p>Compras</p>
+                    </div>
+
+                    <span class="categ-span" id="Compras">R$ 0,00</span>
+                </div>
+
+                <!--casa-->
+                <div class="gastos-categ" id="casa-categ">
+                    <div>
+                        <i class='bx bx-home-alt-2'></i> <p>Casa</p>
+                    </div>   
+
+                    <span class="categ-span" id="Casa">R$ 0,00</span>
+                </div>
+
+                <!--alimentacao-->
+                <div class="gastos-categ" id="alimentacao-categ">
+                    <div>
+                        <i class='bx bx-bowl-hot'></i> <p>Alimentação</p>
+                    </div>
+                    
+                    <span class="categ-span" id="Alimentação">R$ 0,00</span>
+                </div>
+
+                <!--viagem-->
+                <div class="gastos-categ" id="viagem-categ">
+                    <div>
+                        <i class='bx bx-trip'></i> <p>Viagem</p>
+                    </div> 
+                    
+                    <span class="categ-span" id="Viagem">R$ 0,00</span>
+                </div>
+
+                <!--outros-->
+                <div class="gastos-categ" id="outros-categ">
+                    <div>
+                        <i class='bx bx-dots-horizontal-rounded'></i> <p>Outros</p>
+                    </div>   
+
+                    <span class="categ-span" id="Outros">R$ 0,00</span>
+                </div>
+            </div>
+
+            <div class="gastos-detalhes-box">
+                <div class="gastos-detalhes" id="grafico">
+                    <p>Meus Gastos</p>
+
+                    <div>
+                        <img src="./assets/img/chart.png">
+                    </div>
+                </div>   
+                
+                <div class="gastos-detalhes" id="tabela">
+                    <p>Adicionados Recentemente</p>
+
+                    <table>
+                        <thead>
+                            <th>Nome</th>
+                            <th>Valor</th>
+                            <th>Data</th>
+                            <th>Categoria</th>
+                        </thead>
+
+                        <tbody id="tabela-dados-usuario">
+
+                        </tbody>
+                    </table>
+                </div> 
+            </div>
+                
+        </div>    
+    </main>
+
+
+    <div class="add-gastos">
+        <dialog class="add-gastos-dialog">
+
+            <div class="close-add-gastos">
+                <a href="" id="closeGasto"> <i class='bx bx-x' ></i> </a>
+            </div>
+
+            <div class="add-gastos-content">
+                <h2>Adicionar GASTO</h2>
+
+                <div class="add-gastos-inputs">
+                    <div>
+                        <label for="gastoNome">Nome</label>
+                        <input type="text" id="gastoNome">
+                    </div>
+
+                    <div>
+                        <label for="gastoValor">Valor</label>
+                        <input type="number" id="gastoValor">    
+                    </div>
+
+                    <div>
+                        <label for="gastoData">Data</label>
+                        <input type="date" id="gastoData">    
+                    </div>
+
+                    <div>
+                        <label for="selCategoria">Selecionar Categoria</label>
+                        <select name="selCategoria" id="selCategoria">
+                            <option value="selCategoria" hidden>Selecionar</option>
+                            <option value="">Compras</option>
+                            <option value="">Casa</option>
+                            <option value="">Alimentação</option>
+                            <option value="">Viagem</option>
+                            <option value="">Outros</option>
+                        </select>
+                    </div>
+
+                    <div class="save-gasto">
+                        <button id="salvarGasto">Salvar Gasto</button>
+                    </div>
+                </div>
+            </div>
+        </dialog>
+    </div>
+
+    <!--adicionar Renda-->
+    <div class="add-renda">
+        <dialog class="add-renda-dialog">
+
+            <div class="close-add-renda">
+                <a href="" id="closeRenda"> <i class='bx bx-x' ></i> </a>
+            </div>
+
+            <div class="add-renda-content">
+                <h2>Adicionar RENDA</h2>
+
+                <div class="add-renda-inputs">
+                    <div>
+                        <label for="rendaNome">Nome</label>
+                        <input type="text" id="rendaNome">
+                    </div>
+
+                    <div>
+                        <label for="rendaValor">Valor</label>
+                        <input type="number" id="rendaValor">    
+                    </div>
+
+                    <div>
+                        <label for="rendaData">Data</label>
+                        <input type="date" id="rendaData">    
+                    </div>
+
+                    <div class="save-renda">
+                        <button id="salvarRenda" onclick="salvarRenda()">Salvar Renda</button>
+                    </div>
+                </div>
+            </div>
+        </dialog>
+    </div>
+    
+    <script src="./assets/js/add-gasto.js"></script>
+    <script src="./assets/js/add-renda.js"></script>
+    <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/financeiro.js"></script>
+    <script src="./assets/js/gastos-categ.js"></script>
+</body>
+</html>
